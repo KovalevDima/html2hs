@@ -1,12 +1,12 @@
 Cabal-version:      3.4
 
 
-name:               html-extractor
+name:               html2hs
 version:            0.0.0.1
 build-type:         Simple
 license:            BSD-3-Clause
 
-executable html-extractor
+executable html2hs
   default-language: GHC2021
   hs-source-dirs: .
   main-is: index.hs
