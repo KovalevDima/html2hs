@@ -1,0 +1,19 @@
+Cabal-version:      3.4
+
+
+name:               html-extractor
+version:            0.0.0.1
+build-type:         Simple
+license:            BSD-3-Clause
+
+executable html-extractor
+  default-language: GHC2021
+  hs-source-dirs: .
+  main-is: index.hs
+  build-depends:
+      base
+    , tagsoup
+    , bytestring
+    , text
+  ghc-options:
+    -threaded -Wall
