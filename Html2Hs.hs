@@ -1,4 +1,4 @@
-module Main where
+module Html2Hs (runHtml2Hs) where
 
 import System.Environment (getArgs, getProgName)
 import System.Exit (exitFailure)
@@ -7,8 +7,8 @@ import Text.HTML.TagSoup
 
 -- html-extractor [args] -h label Foo.lhs /tmp/somefile
 
-main :: IO ()
-main = getArgs >>= \args -> do
+runHtml2Hs :: IO ()
+runHtml2Hs = getArgs >>= \args -> do
   case break (== "-h") args of
     (_opts, "-h" : files) -> case files of
       [src, cur, dst] -> writeFileUtf8 dst =<< preprocess src =<< readFileUtf8 cur

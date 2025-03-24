@@ -6,14 +6,23 @@ version:            0.0.0.1
 build-type:         Simple
 license:            BSD-3-Clause
 
-executable html2hs
-  default-language: GHC2021
+library
+  exposed-modules:
+    Html2Hs
   hs-source-dirs: .
-  main-is: index.hs
   build-depends:
       base
     , tagsoup
     , bytestring
     , text
+  default-language: Haskell2010
+
+executable html2hs
+  main-is: Main.hs
+  build-depends:
+      base
+    , tagsoup
+    , html2hs
   ghc-options:
     -threaded -Wall
+  default-language: Haskell2010
